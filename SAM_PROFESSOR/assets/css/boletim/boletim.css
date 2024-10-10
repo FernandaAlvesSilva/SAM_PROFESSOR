@@ -1,0 +1,169 @@
+.container {
+    width: 90%; /* Largura da container */
+    max-width: 1000px; /* Largura máxima da container */
+    margin: 20px auto; /* Margem superior/inferior de 20px e centralização horizontal */
+    color: #333; /* Cor das letras visíveis */
+    background-color: #fff; /* Cor de fundo da container */
+    padding: 20px; /* Espaçamento interno da container */
+    border-radius: 8px; /* Arredondamento dos cantos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor da container */
+    overflow-x: auto; /* Permitir rolagem horizontal */
+}
+
+h1 {
+    text-align: center; /* Centralizar o texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.filters {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: space-between; /* Espaçar itens igualmente */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    flex-wrap: wrap; /* Permitir quebra de linha dos itens */
+}
+
+.filters select, .filters input {
+    padding: 10px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento externo */
+    border-radius: 4px; /* Arredondamento dos cantos */
+    border: 1px solid #ddd; /* Borda */
+    width: 200px; /* Largura dos inputs e selects */
+}
+
+table {
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Colapsar bordas */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Borda da tabela, cabeçalhos e células */
+}
+
+th, td {
+    padding: 12px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    color: #333; /* Cor das letras visíveis */
+}
+
+th {
+    background-color: #f2f2f2; /* Cor de fundo dos cabeçalhos */
+}
+
+input[type="number"], textarea {
+    width: 80px; /* Largura dos inputs numéricos */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 4px; /* Arredondamento dos cantos */
+    border: 1px solid #ddd; /* Borda */
+}
+
+textarea {
+    width: 120px; /* Largura das textareas */
+}
+
+.actions button {
+    padding: 8px 12px; /* Espaçamento interno */
+    background-color: #4CAF50; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Sem borda */
+    margin: 5px; /* Espaçamento externo */
+    border-radius: 4px; /* Arredondamento dos cantos */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.actions button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+.actions .edit {
+    background-color: #f39c12; /* Cor de fundo dos botões de edição */
+}
+
+.actions .edit:hover {
+    background-color: #e67e22; /* Cor de fundo ao passar o mouse nos botões de edição */
+}
+
+.save-button, .send-button {
+    text-align: right; /* Alinhar texto à direita */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.save-button button, .send-button button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #3498db; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Arredondamento dos cantos */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.save-button button:hover, .send-button button:hover {
+    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+}
+
+.send-button button {
+    background-color: #e74c3c; /* Cor de fundo dos botões de envio */
+}
+
+.send-button button:hover {
+    background-color: #c0392b; /* Cor de fundo ao passar o mouse nos botões de envio */
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 95%; /* Ajustar largura da container */
+    }
+    .filters select, .filters input {
+        width: 180px; /* Ajustar largura dos inputs e selects */
+    }
+    input[type="number"], textarea {
+        width: 70px; /* Ajustar largura dos inputs numéricos */
+    }
+    textarea {
+        width: 110px; /* Ajustar largura das textareas */
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* Dispor itens em coluna */
+        align-items: flex-start; /* Alinhar itens à esquerda */
+    }
+    .filters select, .filters input {
+        width: 100%; /* Ajustar largura dos inputs e selects */
+    }
+    table, th, td {
+        font-size: 12px; /* Ajustar tamanho da fonte */
+    }
+    input[type="number"], textarea {
+        width: 60px; /* Ajustar largura dos inputs numéricos */
+    }
+    textarea {
+        width: 100px; /* Ajustar largura das textareas */
+    }
+    .save-button, .send-button {
+        text-align: center; /* Centralizar texto */
+        width: 100%; /* Ajustar largura */
+    }
+    .save-button button, .send-button button {
+        width: 100%; /* Ajustar largura dos botões */
+        padding: 10px; /* Ajustar espaçamento interno */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Ajustar largura da container */
+        padding: 10px; /* Ajustar espaçamento interno */
+    }
+    th, td {
+        padding: 8px; /* Ajustar espaçamento interno */
+    }
+    .actions button {
+        padding: 6px 10px; /* Ajustar espaçamento interno */
+    }
+    .save-button button, .send-button button {
+        padding: 8px 16px; /* Ajustar espaçamento interno */
+        width: 100%; /* Ajustar largura dos botões */
+    }
+}

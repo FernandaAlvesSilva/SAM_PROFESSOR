@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Professor Coordenador</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/global/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/global/estilogeral.css">
+ 
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/Group 4.png" type="image/png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Box-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!--========== HEADER ==========-->
+<header class="header">
+    <div class="header__container">
+        <div class="header__search">
+            <input type="search" placeholder="Search" class="header__input">
+            <i class='bx bx-search header__icon'></i>
+        </div>
+        <div class="header__dropdown">
+            <i class='bx bx-bell header__notification'></i>
+            <div class="header__dropdown-content">
+                <a href="#" class="header__dropdown-item">
+                    <div class="header__notification-item">
+                        <img src="../../assets/img/home/fotos/Ana_Icon.png" alt="Notificação 1">
+                        <div>
+                            <h4>Notificação 1</h4>
+                            <p>Descrição da notificação 1</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="header__dropdown-item">
+                    <div class="header__notification-item">
+                        <img src="../../assets/img/home/fotos/img_enrico.png" alt="Notificação 2">
+                        <div>
+                            <h4>Notificação 2</h4>
+                            <p>Descrição da notificação 2</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="header__dropdown-item">
+                    <div class="header__notification-item">
+                        <img src="../../assets/img/home/fotos/img_neide.png" alt="Notificação 3">
+                        <div>
+                            <h4>Notificação 3</h4>
+                            <p>Descrição da notificação 3</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="header__dropdown">
+            <img src="../../assets/img/home/fotos/Usuário_Header.png" alt="" class="header__img">
+            <div class="header__dropdown-content">
+                <a href="../../html/perfil/index.html" class="header__dropdown-item">
+                    <i class='bx bx-user'></i> Perfil
+                </a>
+                <a href="../../html/configuracoes/index.html" class="header__dropdown-item">
+                    <i class='bx bx-cog'></i> Configurações
+                </a>
+                <a href="../../html/faq/index.html" class="header__dropdown-item">
+                    <i class='bx bx-help-circle'></i> Ajuda
+                </a>
+            </div>
+        </div>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+    </div>
+</header>
+
+
+
+<!--========== NAV ==========-->
+<div class="nav" id="navbar">
+    <nav class="nav__container">
+        <div>
+            <a href="#" class="nav__link nav__logo">
+                <img src="../../assets/img/Group 4.png" alt="Logo SAM" class="nav__logo-img">
+                <span class="nav__logo-name">SAM</span>
+            </a>
+            <div class="nav__list">
+                <div class="nav__items">
+                    <h3 class="nav__subtitle">Home</h3>
+                    <a href="../../html/home/home.html" class="nav__link">
+                        <i class='bx bx-home nav__icon'></i>
+                        <span class="nav__name">Home</span>
+                    </a>
+                    <a href="../../html/historico/index.html" class="nav__link active">
+                        <i class='bx bx-history nav__icon'></i>
+                        <span class="nav__name">Histórico</span>
+                    </a>
+                    <a href="../../html/documentos/index.html" class="nav__link">
+                        <i class='bx bx-file nav__icon'></i>
+                        <span class="nav__name">Documentos</span>
+                    </a>
+                    <a href="../../html/calendario/index.html" class="nav__link">
+                        <i class='bx bx-calendar nav__icon'></i>
+                        <span class="nav__name">Cronograma</span>
+                    </a>
+                    <a href="../../html/enquetes/index.html" class="nav__link">
+                        <i class='bx bx-poll nav__icon'></i>
+                        <span class="nav__name">Pesquisas Secretaria</span>
+                    </a>
+                    <a href="../../html/chat/index.html" class="nav__link">
+                        <i class='bx bx-chat nav__icon'></i>
+                        <span class="nav__name">Chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="../../html/login/login.html" class="nav__link nav__logout">
+            <i class='bx bx-log-out nav__icon'></i>
+            <span class="nav__name">Sair</span>
+        </a>
+    </nav>
+</div>
+
+
+<!--=================================================================== MAIN CONTENT ============================================================-->
+
+<main>
+    <style>
+
+        .main-dashboard {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .card .count {
+            font-size: 32px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 10px;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar-inner {
+            background-color: #007bff;
+            height: 100%;
+            width: 75%; /* Ajuste conforme o progresso */
+        }
+
+        .events-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .events-list li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .events-list li span {
+            font-weight: bold;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 250px;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <div class="main-dashboard">
+        
+        <!-- Card de Visão Geral de Disciplinas -->
+        <a href="disciplinas.html" class="card">
+            <h3>Disciplinas Coordenadas</h3>
+            <div class="count">8</div>
+            <p>Disciplinas atualmente sob sua coordenação.</p>
+        </a>
+
+        <!-- Card de Alunos Supervisionados -->
+        <a href="alunos.html" class="card">
+            <h3>Alunos Supervisionados</h3>
+            <div class="count">120</div>
+            <p>Total de alunos sob supervisão direta em várias disciplinas.</p>
+        </a>
+        <!-- Card de Supervisão de Professores -->
+        <a href="professores.html" class="card">
+            <h3>Professores Supervisionados</h3>
+            <div class="count">15</div>
+            <p>Número de professores sob sua coordenação. Clique para detalhes.</p>
+        </a>
+        <!-- Card de Progresso Acadêmico com Gráfico -->
+        <div class="card">
+            <h3>Progresso Acadêmico Geral</h3>
+            <p>Média de progresso dos alunos nas disciplinas coordenadas.</p>
+            <canvas id="progressChart"></canvas>
+        </div>
+
+        <!-- Card de Reuniões Agendadas -->
+        <a href="reunioes.html" class="card">
+            <h3>Reuniões Agendadas</h3>
+            <ul class="events-list">
+                <li><span>12/10:</span> Reunião com o corpo docente</li>
+                <li><span>15/10:</span> Discussão sobre planejamento anual</li>
+                <li><span>20/10:</span> Reunião com os diretores</li>
+            </ul>
+        </a>
+
+        <!-- Card de Relatórios Pendentes -->
+        <a href="relatorios.html" class="card">
+            <h3>Relatórios Pendentes</h3>
+            <div class="count">3</div>
+            <p>Relatórios acadêmicos que precisam ser enviados.</p>
+        </a>
+
+        <!-- Card de Comunicados Recentes -->
+        <a href="comunicados.html" class="card">
+            <h3>Comunicados Recentes</h3>
+            <ul class="events-list">
+                <li><span>05/10:</span> Prazo de entrega de notas</li>
+                <li><span>03/10:</span> Atualização no currículo</li>
+                <li><span>01/10:</span> Mudanças no sistema SAM</li>
+            </ul>
+        </a>
+        <!-- Card de Desempenho das Turmas -->
+        <div class="card">
+            <h3>Desempenho das Turmas</h3>
+            <canvas id="performanceChart"></canvas>
+        </div>
+
+</div>
+    <script>
+        // Gráfico de Progresso Acadêmico (usando Chart.js)
+        var ctx = document.getElementById('progressChart').getContext('2d');
+        var progressChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Disciplina 1', 'Disciplina 2', 'Disciplina 3', 'Disciplina 4'],
+                datasets: [{
+                    label: 'Progresso (%)',
+                    data: [85, 72, 90, 60],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    var ctx = document.getElementById('performanceChart').getContext('2d');
+    var performanceChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Turma A', 'Turma B', 'Turma C', 'Turma D'],
+            datasets: [{
+                label: 'Média de Notas (%)',
+                data: [85, 78, 92, 65],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+</main>
+
+
+    <!-- Scripts -->
+    <script src="../../assets/js/sidebar/sidebar.js"></script>
+    <script src="../../assets/js/dashboard/dashboard.js"></script>
+</body>
+</html>
