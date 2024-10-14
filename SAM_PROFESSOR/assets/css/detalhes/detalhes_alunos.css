@@ -26,25 +26,17 @@
 }
 
 .student-info h2 {
-    margin: 0;
-    font-size: 1.8em;
+    margin: 10px 0;
+    margin-left: 20px;
+    font-size: 25px;
     color: #4b0082; /* Dark purple */
 }
 
 .student-info p {
     margin: 5px 0;
+    margin-left: 20px;
+    font-size: 16px;
     color: #4b0082; /* Dark purple */
-}
-
-.student-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #eee;
-    background-image: url('student-photo.jpg');
-    background-size: cover;
-    background-position: center;
-    margin-right: 15px;
 }
 
 .detail-section {
@@ -280,6 +272,7 @@
     background-color: #3a0066; /* Darker purple */
 }
 
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .container {
         padding: 15px;
