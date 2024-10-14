@@ -63,7 +63,7 @@
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 20px;
     color: #4b0082; /* Dark purple */
 }
 
@@ -299,6 +299,10 @@
         flex: 1 1 100%;
     }
 
+    .card h3 {
+        font-size: 18px;
+    }
+
     .graph {
         width: 90vw;
         height: 30vh;
@@ -339,6 +343,10 @@
 
     .card {
         flex: 1 1 100%;
+    }
+
+    .card h3 {
+        font-size: 16px;
     }
 
     .graph {
@@ -382,7 +390,10 @@
     .card {
         flex: 1 1 100%;
     }
-
+    
+    .card h3 {
+        font-size: 14px;
+    }
     .graph {
         width: 95vw;
         height: 25vh;
