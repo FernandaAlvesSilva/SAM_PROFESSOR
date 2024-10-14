@@ -139,7 +139,6 @@
 
 <!--=================================================================== MAIN CONTENT ============================================================-->
 
-
 <main>
     <style>
         .container {
@@ -251,7 +250,7 @@
 
         .graph {
             width: 60%;
-            height: 300px;
+            height: 200px;
             margin: 0 auto;
         }
 
@@ -272,27 +271,30 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000; /* Aumenta o z-index para garantir que o modal fique acima de outros elementos */
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* Remove a rolagem da página quando o modal está aberto */
-            background-color: rgba(0, 0, 0, 0.6); /* Aumenta a opacidade do fundo */
-            backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque ao fundo */
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
         }
 
         .modal-content {
             background-color: #fff;
-            margin: 10% auto; /* Ajusta a margem para centralizar melhor o modal */
-            padding: 30px; /* Aumenta o padding para mais espaço interno */
-            border: none; /* Remove a borda padrão */
-            width: 60%; /* Ajusta a largura do modal */
-            max-width: 600px; /* Define uma largura máxima */
-            border-radius: 12px; /* Bordas mais arredondadas */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais suave */
-            animation: fadeIn 0.3s ease-out; /* Adiciona uma animação de fade-in */
+            margin: 5% auto;
+            padding: 20px;
+            border: none;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease-out;
+            max-height: 80%;
+            overflow-y: auto;
         }
+
         .modal-content a {
             color: #0a0a0a;
         }
@@ -349,21 +351,28 @@
         }
 
         .close {
-            color: #adabab; /* Muda a cor para um cinza mais escuro */
-            float: right; /* Alinha o botão à direita */
-            font-size: 24px; /* Ajusta o tamanho da fonte */
+            color: #adabab;
+            float: right;
+            font-size: 24px;
             font-weight: 400;
             cursor: pointer;
-            transition: color 0.3s ease; /* Adiciona uma transição suave para a cor */
+            transition: color 0.3s ease;
         }
 
         .close:hover,
         .close:focus {
-            color: #000; /* Muda a cor no hover e focus */
+            color: #000;
             text-decoration: none;
         }
 
         /* Input Styles for Modals */
+        .modal-body label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #4b0082; /* Dark purple */
+        }
+
         .modal-body input[type="date"],
         .modal-body input[type="time"],
         .modal-body input[type="text"],
@@ -386,6 +395,33 @@
         .modal-body textarea:focus {
             border-color: #4b0082; /* Dark purple */
             outline: none;
+        }
+
+        .modal-footer button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4b0082; /* Dark purple */
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .modal-footer button:hover {
+            background-color: #3a0066; /* Darker purple */
+        }
+
+        @media (max-width: 768px) {
+            .graph {
+                width: 100%;
+                height: 150px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
         }
     </style>
 
@@ -566,7 +602,6 @@
         }
     </script>
 </main>
-
 
 
     <!-- Scripts -->
