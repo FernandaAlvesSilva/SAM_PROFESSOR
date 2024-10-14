@@ -6,7 +6,7 @@
     <title>Detalhes - Alunos</title>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../assets/css/dashboard/alunos.css">
+    <link rel="stylesheet" href="../../assets/css/detalhes/detalhes_alunos.css">
     <link rel="stylesheet" href="../../assets/css/global/sidebar.css">
     <link rel="stylesheet" href="../../assets/css/global/estilogeral.css">
  
@@ -140,291 +140,7 @@
 <!--=================================================================== MAIN CONTENT ============================================================-->
 
 <main>
-    <style>
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .student-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-
-        .student-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .student-info h2 {
-            margin: 0;
-            font-size: 1.8em;
-            color: #4b0082; /* Dark purple */
-        }
-
-        .student-info p {
-            margin: 5px 0;
-            color: #4b0082; /* Dark purple */
-        }
-
-        .student-photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #eee;
-            background-image: url('student-photo.jpg');
-            background-size: cover;
-            background-position: center;
-            margin-right: 15px;
-        }
-
-        .detail-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .card {
-            flex: 1 1 300px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            position: relative;
-        }
-
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.2em;
-            color: #4b0082; /* Dark purple */
-        }
-
-        .card p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .card .icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5em;
-            color: #4b0082; /* Dark purple */
-        }
-
-        .actions {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        .actions button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4b0082; /* Dark purple */
-            color: white;
-            cursor: pointer;
-            margin-left: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .actions button:hover {
-            background-color: #3a0066; /* Darker purple */
-        }
-
-        .graph-container {
-            width: 100%;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .graph {
-            width: 60%;
-            height: 200px;
-            margin: 0 auto;
-        }
-
-        .btn-back {
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #ccc;
-            color: #333;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn-back:hover {
-            background-color: #bbb;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 5% auto;
-            padding: 20px;
-            border: none;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 0.3s ease-out;
-            max-height: 80%;
-            overflow-y: auto;
-        }
-
-        .modal-content a {
-            color: #0a0a0a;
-        }
-
-        .modal-content h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #391453;
-            margin-bottom: 20px;
-        }
-
-        .modal-content p {
-            font-size: 16px;
-            font-weight: 400;
-            color: #000;
-            margin-bottom: 20px;
-        }
-
-        .modal-content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .modal-content li {
-            font-size: 16px;
-            font-weight: 400;
-            color: #000;
-            margin-bottom: 20px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-body {
-            padding: 20px;
-            color: #333;
-        }
-
-        .sendMessageForm {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #edeef7;
-            margin-bottom: 10px;
-        }
-
-        .close {
-            color: #adabab;
-            float: right;
-            font-size: 24px;
-            font-weight: 400;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-        }
-
-        /* Input Styles for Modals */
-        .modal-body label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #4b0082; /* Dark purple */
-        }
-
-        .modal-body input[type="date"],
-        .modal-body input[type="time"],
-        .modal-body input[type="text"],
-        .modal-body input[type="email"],
-        .modal-body input[type="tel"],
-        .modal-body textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        .modal-body input[type="date"]:focus,
-        .modal-body input[type="time"]:focus,
-        .modal-body input[type="text"]:focus,
-        .modal-body input[type="email"]:focus,
-        .modal-body input[type="tel"]:focus,
-        .modal-body textarea:focus {
-            border-color: #4b0082; /* Dark purple */
-            outline: none;
-        }
-
-        .modal-footer button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4b0082; /* Dark purple */
-            color: white;
-            cursor: pointer;
-            margin-left: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .modal-footer button:hover {
-            background-color: #3a0066; /* Darker purple */
-        }
-
-        @media (max-width: 768px) {
-            .graph {
-                width: 100%;
-                height: 150px;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-            }
-        }
-    </style>
-
+  
     <!-- Container Principal -->
     <div class="container">
         <div class="student-header">
@@ -432,8 +148,7 @@
                 <h2>Maria Silva</h2>
                 <p>Matrícula: 2023001234</p>
                 <p>Turma: 3º Ano B</p>
-            </div>
-            <div class="student-photo"></div>
+            </div>   
         </div>
 
         <!-- Seção de Detalhes -->
@@ -442,7 +157,7 @@
                 <h3>Desempenho Acadêmico</h3>
                 <i class="fas fa-chart-line icon"></i>
                 <p>Média: 8.7</p>
-                <p>Disciplinas em Risco: Matemática, Física</p>
+                <p>Disciplinas em Risco: Lógica de Programação e Phyton</p>
             </div>
 
             <div class="card">
@@ -534,79 +249,10 @@
         </div>
     </div>
 
-    <script>
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-        const performanceChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Desempenho Acadêmico', 'Frequência', 'Observações'],
-                datasets: [{
-                    label: 'Detalhes do Aluno',
-                    data: [87, 95, 75],
-                    backgroundColor: [
-                        'rgba(75, 0, 130, 0.6)', // Dark purple
-                        'rgba(54, 162, 235, 0.6)', // Blue
-                        'rgba(255, 206, 86, 0.6)' // Yellow
-                    ],
-                    borderColor: [
-                        'rgba(75, 0, 130, 1)', // Dark purple
-                        'rgba(54, 162, 235, 1)', // Blue
-                        'rgba(255, 206, 86, 1)' // Yellow
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(tooltipItem) {
-                                return tooltipItem.label + ': ' + tooltipItem.raw + '%';
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        // Modal functionality
-        const modals = document.querySelectorAll(".modal");
-        const openModalBtn = document.getElementById("openModalBtn");
-        const sendMessageBtn = document.getElementById("sendMessageBtn");
-        const closeBtns = document.querySelectorAll(".close");
-
-        openModalBtn.onclick = function() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        sendMessageBtn.onclick = function() {
-            document.getElementById("sendMessageModal").style.display = "block";
-        }
-
-        closeBtns.forEach(btn => {
-            btn.onclick = function() {
-                modals.forEach(modal => modal.style.display = "none");
-            }
-        });
-
-        window.onclick = function(event) {
-            modals.forEach(modal => {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            });
-        }
-    </script>
 </main>
-
 
     <!-- Scripts -->
     <script src="../../assets/js/sidebar/sidebar.js"></script>
-    <script src="../../assets/js/dashboard/dashboard.js"></script>
-    <script src="../../assets/js/dashboard/alunos.js"></script>
+    <script src="../../assets/js/detalhes/detalhes_aluno.js"></script>
 </body>
 </html>
