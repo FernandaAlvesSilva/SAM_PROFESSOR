@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes - Professores</title>
+    <title>Detalhes - Alunos</title>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../assets/css/dashboard/alunos.css">
+    <link rel="stylesheet" href="../../assets/css/detalhes/detalhes_professor.css">
     <link rel="stylesheet" href="../../assets/css/global/sidebar.css">
     <link rel="stylesheet" href="../../assets/css/global/estilogeral.css">
  
@@ -139,16 +139,88 @@
 
 <!--=================================================================== MAIN CONTENT ============================================================-->
 
-
 <main>
+  
+    <!-- Container Principal -->
+    <div class="container">
+        <div class="student-header">
+            <div class="student-info">
+                <h2>Prof: Maria Silva</h2>
+                <p>ID: 2023005678</p>
+                <p>Departamento: Ciências da Computação</p>
+            </div>   
+        </div>
+
+        <!-- Seção de Detalhes -->
+        <div class="detail-section">
+            <div class="card">
+                <h3>Desempenho Profissional</h3>
+                <i class="fas fa-chart-line icon"></i>
+                <p>Média de Avaliações: 9.2</p>
+                <p>Disciplinas Ministradas: Algoritmos, Estrutura de Dados</p>
+            </div>
+
+            <div class="card">
+                <h3>Frequência</h3>
+                <i class="fas fa-calendar-check icon"></i>
+                <p>Frequência Geral: 98%</p>
+                <p>Faltas: 2</p>
+            </div>
+
+            <div class="card">
+                <h3>Observações</h3>
+                <i class="fas fa-sticky-note icon"></i>
+                <p>Excelente didática e comprometimento com os alunos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Relatórios</h3>
+                <i class="fas fa-file-alt icon"></i>
+                <ul>
+                    <li><a href="#">Relatório de Desempenho - Set 2024</a></li>
+                    <li><a href="#">Relatório de Frequência - Out 2024</a></li>
+                    <li><a href="#">Relatório de Participação - Jul 2024</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Seção de Gráfico Simulada -->
+        <div class="graph-container">
+            <canvas id="performanceChart" class="graph"></canvas>
+        </div>
+
+        <!-- Ações -->
+        <div class="actions">
+            <button id="sendMessageBtn"><i class="fas fa-envelope"></i> Enviar Mensagem</button>
+            <button onclick="alert('Gerar novo relatório');"><i class="fas fa-file-medical"></i> Gerar Relatório</button>
+        </div>
+    </div>
+
+
+    <!-- Modal Enviar Mensagem -->
+    <div id="sendMessageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Enviar Mensagem</h2>
+            </div>
+            <div class="modal-body">
+                <form id="sendMessageForm">
+                    <label for="emailTo">Para:</label>
+                    <input type="email" id="emailTo" name="emailTo" placeholder="Email do Aluno" required><br><br>
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Assunto da Mensagem" required><br><br>
+                    <label for="message">Mensagem:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </main>
 
-
-
     <!-- Scripts -->
     <script src="../../assets/js/sidebar/sidebar.js"></script>
-    <script src="../../assets/js/dashboard/dashboard.js"></script>
-    <script src="../../assets/js/dashboard/alunos.js"></script>
+    <script src="../../assets/js/detalhes/detalhes_professor.js"></script>
 </body>
 </html>
