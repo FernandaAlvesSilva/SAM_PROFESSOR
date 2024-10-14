@@ -56,11 +56,13 @@
 
 .box input,
 .box select {
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc; /* Adiciona uma borda ao redor dos campos */
-    background-color: #f7f7f7; /* Muda a cor de fundo para um tom mais claro */
+    background-color: #edeef7; /* Muda a cor de fundo para um tom mais claro */
     margin-bottom: 10px;
     transition: border-color 0.3s ease; /* Adiciona uma transição suave na borda */
 }
