@@ -272,30 +272,66 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 1000; /* Aumenta o z-index para garantir que o modal fique acima de outros elementos */
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+            overflow: hidden; /* Remove a rolagem da página quando o modal está aberto */
+            background-color: rgba(0, 0, 0, 0.6); /* Aumenta a opacidade do fundo */
+            backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque ao fundo */
         }
 
         .modal-content {
             background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
+            margin: 10% auto; /* Ajusta a margem para centralizar melhor o modal */
+            padding: 30px; /* Aumenta o padding para mais espaço interno */
+            border: none; /* Remove a borda padrão */
+            width: 60%; /* Ajusta a largura do modal */
+            max-width: 600px; /* Define uma largura máxima */
+            border-radius: 12px; /* Bordas mais arredondadas */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais suave */
+            animation: fadeIn 0.3s ease-out; /* Adiciona uma animação de fade-in */
+        }
+        .modal-content a {
+            color: #0a0a0a;
         }
 
-        .modal-header {
-            padding: 10px;
-            background-color: #3a0066;
-            color: white;
-            border-radius: 10px 10px 0 0;
+        .modal-content h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #391453;
+            margin-bottom: 20px;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .modal-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .modal-content li {
+            font-size: 16px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .modal-body {
@@ -313,25 +349,18 @@
         }
 
         .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
+            color: #adabab; /* Muda a cor para um cinza mais escuro */
+            float: right; /* Alinha o botão à direita */
+            font-size: 24px; /* Ajusta o tamanho da fonte */
+            font-weight: 400;
+            cursor: pointer;
+            transition: color 0.3s ease; /* Adiciona uma transição suave para a cor */
         }
 
         .close:hover,
         .close:focus {
+            color: #000; /* Muda a cor no hover e focus */
             text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-footer button {
-            background-color: #4b0082;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
         }
 
         /* Input Styles for Modals */
