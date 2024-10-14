@@ -1,3 +1,5 @@
+
+
 const ctx = document.getElementById('performanceChart').getContext('2d');
 const performanceChart = new Chart(ctx, {
     type: 'doughnut',
@@ -34,8 +36,7 @@ const performanceChart = new Chart(ctx, {
             }
         }
     }
-});
-
+}); 
 // Modal functionality
 const modals = document.querySelectorAll(".modal");
 const openModalBtn = document.getElementById("openModalBtn");

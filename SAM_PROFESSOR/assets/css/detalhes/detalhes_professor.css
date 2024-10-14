@@ -99,7 +99,7 @@
 .actions button:hover {
     background-color: #3a0066; /* Darker purple */
 }
-
+/*
 .graph-container {
     width: 100%;
     margin: 20px 0;
@@ -112,7 +112,7 @@
     max-width: 600px;
     max-height: 300px;
     margin: 0 auto;
-}
+} */
 
 .btn-back {
     padding: 5px 10px;
