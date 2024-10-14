@@ -141,6 +141,288 @@
 
 
 <main>
+   
+<div class="container">
+    <h1>Detalhes da Matéria</h1>
+
+    <div class="info-section">
+        <div class="info-header">
+            <div>
+                <p>Nome: <strong>Matemática Avançada</strong></p>
+            </div>
+            <div>
+                <p>Código: <strong>MATH101</strong></p>
+            </div>
+            <div>
+                <p>Semestre: <strong>2º Semestre - 2024</strong></p>
+            </div>
+            <div>
+                <p>Professor: <strong>Maria Silva</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="evaluations">
+        <h2 class="section-title">Avaliações</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Data de Entrega</th>
+                    <th>Peso</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Prova 1</td>
+                    <td>2024-05-10</td>
+                    <td>30%</td>
+                    <td><button class="btn secondary" onclick="openModal('editEvaluationModal')">Editar</button></td>
+                </tr>
+                <tr>
+                    <td>Trabalho Final</td>
+                    <td>2024-06-15</td>
+                    <td>50%</td>
+                    <td><button class="btn secondary" onclick="openModal('editEvaluationModal')">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn" onclick="openModal('addEvaluationModal')">Adicionar Avaliação</button>
+    </div>
+
+    <div class="resources">
+        <h2 class="section-title">Material Complementar</h2>
+        <p>Recursos disponíveis: <em>Slides, Vídeos, Apostilas</em></p>
+        <button class="btn" onclick="openModal('addResourceModal')">Adicionar Novo Material</button>
+    </div>
+
+    <div class="classes">
+        <h2 class="section-title">Turmas Associadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Turma</th>
+                    <th>Número de Alunos</th>
+                    <th>Horário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Turma A</td>
+                    <td>25</td>
+                    <td>Segunda - 14:00</td>
+                    <td><button class="btn secondary" onclick="openModal('detailsClassModal', 'Turma A', 25, 'Segunda - 14:00')">Ver Detalhes</button></td>
+                </tr>
+                <tr>
+                    <td>Turma B</td>
+                    <td>30</td>
+                    <td>Quarta - 10:00</td>
+                    <td><button class="btn secondary" onclick="openModal('detailsClassModal', 'Turma B', 30, 'Quarta - 10:00')">Ver Detalhes</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal para Adicionar Avaliação -->
+<div id="addEvaluationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('addEvaluationModal')">&times;</span>
+        <h2>Adicionar Avaliação</h2>
+        <input type="text" id="evaluationTitle" placeholder="Título da Avaliação" required>
+        <input type="date" id="evaluationDate" placeholder="Data de Entrega" required>
+        <input type="number" id="evaluationWeight" placeholder="Peso (%)" required>
+        <button class="btn" onclick="addEvaluation()">Salvar Avaliação</button>
+    </div>
+</div>
+
+<!-- Modal para Editar Avaliação -->
+<div id="editEvaluationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('editEvaluationModal')">&times;</span>
+        <h2>Editar Avaliação</h2>
+        <input type="text" id="editEvaluationTitle" placeholder="Título da Avaliação" required>
+        <input type="date" id="editEvaluationDate" placeholder="Data de Entrega" required>
+        <input type="number" id="editEvaluationWeight" placeholder="Peso (%)" required>
+        <button class="btn" onclick="saveEditedEvaluation()">Salvar Alterações</button>
+    </div>
+</div>
+
+<!-- Modal para Adicionar Novo Material -->
+<div id="addResourceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('addResourceModal')">&times;</span>
+        <h2>Adicionar Novo Material</h2>
+        <input type="text" id="resourceTitle" placeholder="Título do Material" required>
+        <input type="text" id="resourceLink" placeholder="Link do Material" required>
+        <button class="btn" onclick="addResource()">Salvar Material</button>
+    </div>
+</div>
+
+<!-- Modal para Ver Detalhes da Turma -->
+<div id="detailsClassModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('detailsClassModal')">&times;</span>
+        <h2>Detalhes da Turma</h2>
+        <p><strong>Nome da Turma:</strong> <span id="className"></span></p>
+        <p><strong>Número de Alunos:</strong> <span id="studentCount"></span></p>
+        <p><strong>Horário:</strong> <span id="classSchedule"></span></p>
+        <p><strong>Professor:</strong> <span id="classTeacher">Maria Silva</span></p>
+        <button class="btn" onclick="closeModal('detailsClassModal')">Fechar</button>
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    .info-section, .evaluations, .resources, .classes {
+        margin-bottom: 30px;
+    }
+
+    .info-header div {
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #444;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    .btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn.secondary {
+        background-color: #6c757d;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .btn.secondary:hover {
+        background-color: #5a6268;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    input[type="text"], input[type="date"], input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function openModal(modalId, className = '', studentCount = '', classSchedule = '') {
+        if (modalId === 'detailsClassModal') {
+            document.getElementById('className').textContent = className;
+            document.getElementById('studentCount').textContent = studentCount;
+            document.getElementById('classSchedule').textContent = classSchedule;
+        }
+        document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    function addEvaluation() {
+        const title = document.getElementById('evaluationTitle').value;
+        const date = document.getElementById('evaluationDate').value;
+        const weight = document.getElementById('evaluationWeight').value;
+        // Lógica para salvar avaliação no banco de dados
+        closeModal('addEvaluationModal');
+        alert(`Avaliação "${title}" adicionada com sucesso!`);
+    }
+
+    function saveEditedEvaluation() {
+        // Lógica para salvar as alterações da avaliação
+        closeModal('editEvaluationModal');
+        alert("Avaliação editada com sucesso!");
+    }
+
+    function addResource() {
+        const title = document.getElementById('resourceTitle').value;
+        const link = document.getElementById('resourceLink').value;
+        // Lógica para salvar material no banco de dados
+        closeModal('addResourceModal');
+        alert(`Material "${title}" adicionado com sucesso!`);
+    }
+</script>
 
 </main>
 
