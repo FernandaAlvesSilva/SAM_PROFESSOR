@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - Alunos</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/dashboard/alunos.css">
+    <link rel="stylesheet" href="../../assets/css/global/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/global/estilogeral.css">
+ 
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/Group 4.png" type="image/png">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Box-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!--========== HEADER ==========-->
+<header class="header">
+    <div class="header__container">
+        <div class="header__search">
+            <input type="search" placeholder="Search" class="header__input">
+            <i class='bx bx-search header__icon'></i>
+        </div>
+        <div class="header__dropdown">
+            <i class='bx bx-bell header__notification'></i>
+            <div class="header__dropdown-content">
+                <a href="#" class="header__dropdown-item">
+                    <div class="header__notification-item">
+                        <img src="../../assets/img/home/fotos/Ana_Icon.png" alt="Notificação 1">
+                        <div>
+                            <h4>Notificação 1</h4>
+                            <p>Descrição da notificação 1</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="header__dropdown-item">
+                    <div class="header__notification-item">
+                        <img src="../../assets/img/home/fotos/img_enrico.png" alt="Notificação 2">
+                        <div>
+                            <h4>Notificação 2</h4>
+                            <p>Descrição da notificação 2</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="header__dropdown-item">
+                    <div class="header__notification-item">
+                        <img src="../../assets/img/home/fotos/img_neide.png" alt="Notificação 3">
+                        <div>
+                            <h4>Notificação 3</h4>
+                            <p>Descrição da notificação 3</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="header__dropdown">
+            <img src="../../assets/img/home/fotos/Usuário_Header.png" alt="" class="header__img">
+            <div class="header__dropdown-content">
+                <a href="../../html/perfil/index.html" class="header__dropdown-item">
+                    <i class='bx bx-user'></i> Perfil
+                </a>
+                <a href="../../html/configuracoes/index.html" class="header__dropdown-item">
+                    <i class='bx bx-cog'></i> Configurações
+                </a>
+                <a href="../../html/faq/index.html" class="header__dropdown-item">
+                    <i class='bx bx-help-circle'></i> Ajuda
+                </a>
+            </div>
+        </div>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+    </div>
+</header>
+
+
+
+<!--========== NAV ==========-->
+<div class="nav" id="navbar">
+    <nav class="nav__container">
+        <div>
+            <a href="#" class="nav__link nav__logo">
+                <img src="../../assets/img/Group 4.png" alt="Logo SAM" class="nav__logo-img">
+                <span class="nav__logo-name">SAM</span>
+            </a>
+            <div class="nav__list">
+                <div class="nav__items">
+                    <h3 class="nav__subtitle">Home</h3>
+                    <a href="../../html/home/home.html" class="nav__link">
+                        <i class='bx bx-home nav__icon'></i>
+                        <span class="nav__name">Home</span>
+                    </a>
+                    <a href="../../html/historico/index.html" class="nav__link active">
+                        <i class='bx bx-history nav__icon'></i>
+                        <span class="nav__name">Histórico</span>
+                    </a>
+                    <a href="../../html/documentos/index.html" class="nav__link">
+                        <i class='bx bx-file nav__icon'></i>
+                        <span class="nav__name">Documentos</span>
+                    </a>
+                    <a href="../../html/calendario/index.html" class="nav__link">
+                        <i class='bx bx-calendar nav__icon'></i>
+                        <span class="nav__name">Cronograma</span>
+                    </a>
+                    <a href="../../html/enquetes/index.html" class="nav__link">
+                        <i class='bx bx-poll nav__icon'></i>
+                        <span class="nav__name">Pesquisas Secretaria</span>
+                    </a>
+                    <a href="../../html/chat/index.html" class="nav__link">
+                        <i class='bx bx-chat nav__icon'></i>
+                        <span class="nav__name">Chat</span>
+                    </a>
+                    <h2 class="nav__subtitle">Professor Coordenador</h2>
+                    <a href="../../html/dashboard/index.html" class="nav__link">
+                        <i class='bx bx-bar-chart-alt-2 nav__icon'></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="../../html/login/login.html" class="nav__link nav__logout">
+            <i class='bx bx-log-out nav__icon'></i>
+            <span class="nav__name">Sair</span>
+        </a>
+    </nav>
+</div>
+
+<!--=================================================================== MAIN CONTENT ============================================================-->
+
+
+<main>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .student-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .student-info h2 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #4b0082; /* Dark purple */
+        }
+
+        .student-info p {
+            margin: 5px 0;
+            color: #4b0082; /* Dark purple */
+        }
+
+        .student-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #eee;
+            background-image: url('student-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-right: 15px;
+        }
+
+        .detail-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 1 1 300px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            position: relative;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #4b0082; /* Dark purple */
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            color: #4b0082; /* Dark purple */
+        }
+
+        .actions {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .actions button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4b0082; /* Dark purple */
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .actions button:hover {
+            background-color: #3a0066; /* Darker purple */
+        }
+
+        .graph-container {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .graph {
+            width: 60%;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .btn-back {
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #ccc;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #bbb;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            padding: 10px;
+            background-color: #3a0066;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .modal-body {
+            padding: 20px;
+            color: #333;
+        }
+
+        .sendMessageForm {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #edeef7;
+            margin-bottom: 10px;
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-footer button {
+            background-color: #4b0082;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Input Styles for Modals */
+        .modal-body input[type="date"],
+        .modal-body input[type="time"],
+        .modal-body input[type="text"],
+        .modal-body input[type="email"],
+        .modal-body input[type="tel"],
+        .modal-body textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .modal-body input[type="date"]:focus,
+        .modal-body input[type="time"]:focus,
+        .modal-body input[type="text"]:focus,
+        .modal-body input[type="email"]:focus,
+        .modal-body input[type="tel"]:focus,
+        .modal-body textarea:focus {
+            border-color: #4b0082; /* Dark purple */
+            outline: none;
+        }
+    </style>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <div class="student-header">
+            <div class="student-info">
+                <h2>Maria Silva</h2>
+                <p>Matrícula: 2023001234</p>
+                <p>Turma: 3º Ano B</p>
+            </div>
+            <div class="student-photo"></div>
+        </div>
+
+        <!-- Seção de Detalhes -->
+        <div class="detail-section">
+            <div class="card">
+                <h3>Desempenho Acadêmico</h3>
+                <i class="fas fa-chart-line icon"></i>
+                <p>Média: 8.7</p>
+                <p>Disciplinas em Risco: Matemática, Física</p>
+            </div>
+
+            <div class="card">
+                <h3>Frequência</h3>
+                <i class="fas fa-calendar-check icon"></i>
+                <p>Frequência Geral: 95%</p>
+                <p>Faltas: 5</p>
+            </div>
+
+            <div class="card">
+                <h3>Observações</h3>
+                <i class="fas fa-sticky-note icon"></i>
+                <p>Bom desenvolvimento, mas precisa de mais prática em Matemática.</p>
+            </div>
+
+            <div class="card">
+                <h3>Relatórios</h3>
+                <i class="fas fa-file-alt icon"></i>
+                <ul>
+                    <li><a href="#">Relatório de Desempenho - Set 2024</a></li>
+                    <li><a href="#">Relatório de Frequência - Out 2024</a></li>
+                    <li><a href="#">Relatório de Participação - Jul 2024</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Seção de Gráfico Simulada -->
+        <div class="graph-container">
+            <canvas id="performanceChart" class="graph"></canvas>
+        </div>
+
+        <!-- Ações -->
+        <div class="actions">
+            <button id="sendMessageBtn"><i class="fas fa-envelope"></i> Enviar Mensagem</button>
+            <button onclick="alert('Gerar novo relatório');"><i class="fas fa-file-medical"></i> Gerar Relatório</button>
+            <button id="openModalBtn"><i class="fas fa-calendar-plus"></i> Agendar Reunião</button>
+        </div>
+    </div>
+
+    <!-- Modal Agendar Reunião -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Agendar Reunião</h2>
+            </div>
+            <div class="modal-body">
+                <form id="meetingForm">
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date" required><br><br>
+                    <label for="time">Hora:</label>
+                    <input type="time" id="time" name="time" required><br><br>
+                    <label for="responsavel">Responsável:</label>
+                    <input type="text" id="responsavel" name="responsavel" placeholder="Nome do Responsável" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email do Responsável" required><br><br>
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefone do Responsável" required><br><br>
+                    <label for="description">Descrição:</label><br>
+                    <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" form="meetingForm">Agendar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Enviar Mensagem -->
+    <div id="sendMessageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Enviar Mensagem</h2>
+            </div>
+            <div class="modal-body">
+                <form id="sendMessageForm">
+                    <label for="emailTo">Para:</label>
+                    <input type="email" id="emailTo" name="emailTo" placeholder="Email do Aluno" required><br><br>
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Assunto da Mensagem" required><br><br>
+                    <label for="message">Mensagem:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" form="sendMessageForm">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Desempenho Acadêmico', 'Frequência', 'Observações'],
+                datasets: [{
+                    label: 'Detalhes do Aluno',
+                    data: [87, 95, 75],
+                    backgroundColor: [
+                        'rgba(75, 0, 130, 0.6)', // Dark purple
+                        'rgba(54, 162, 235, 0.6)', // Blue
+                        'rgba(255, 206, 86, 0.6)' // Yellow
+                    ],
+                    borderColor: [
+                        'rgba(75, 0, 130, 1)', // Dark purple
+                        'rgba(54, 162, 235, 1)', // Blue
+                        'rgba(255, 206, 86, 1)' // Yellow
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Modal functionality
+        const modals = document.querySelectorAll(".modal");
+        const openModalBtn = document.getElementById("openModalBtn");
+        const sendMessageBtn = document.getElementById("sendMessageBtn");
+        const closeBtns = document.querySelectorAll(".close");
+
+        openModalBtn.onclick = function() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        sendMessageBtn.onclick = function() {
+            document.getElementById("sendMessageModal").style.display = "block";
+        }
+
+        closeBtns.forEach(btn => {
+            btn.onclick = function() {
+                modals.forEach(modal => modal.style.display = "none");
+            }
+        });
+
+        window.onclick = function(event) {
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+</main>
+
+
+
+    <!-- Scripts -->
+    <script src="../../assets/js/sidebar/sidebar.js"></script>
+    <script src="../../assets/js/dashboard/dashboard.js"></script>
+    <script src="../../assets/js/dashboard/alunos.js"></script>
+</body>
+</html>
