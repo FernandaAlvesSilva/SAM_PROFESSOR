@@ -154,7 +154,7 @@
                 <p>Código: <strong>MATH101</strong></p>
             </div>
             <div>
-                <p>Semestre: <strong>2º Semestre - 2024</strong></p>
+                <p>Semestre: <strong>2º Semestre - 2024</strong>
             </div>
             <div>
                 <p>Professor: <strong>Maria Silva</strong></p>
@@ -276,17 +276,22 @@
 
 <style>
     .container {
+        background-color: white;
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     h1, h2 {
         color: #333;
+
     }
 
     .info-section, .evaluations, .resources, .classes {
         margin-bottom: 30px;
+        color: #333;
     }
 
     .info-header div {
@@ -297,12 +302,15 @@
         margin-bottom: 20px;
         font-size: 1.5em;
         color: #444;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
+        
     }
 
     table, th, td {
@@ -310,57 +318,61 @@
     }
 
     th, td {
+        color: black;
         padding: 10px;
         text-align: left;
     }
 
     th {
-        background-color: #f4f4f4;
+        color: white;
+        background-color: #4a206d;
     }
 
     .btn {
-        background-color: #007bff;
+        background-color: #3e0c58;
         color: white;
         padding: 10px 20px;
         border: none;
         cursor: pointer;
         border-radius: 5px;
+        transition: background-color 0.3s ease;
     }
 
     .btn.secondary {
-        background-color: #6c757d;
+        background-color: #3f0e57;
     }
 
     .btn:hover {
-        background-color: #0056b3;
-    }
-
-    .btn.secondary:hover {
-        background-color: #5a6268;
+        background-color: #2e0840;
     }
 
     .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
-    }
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
 
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        max-width: 500px;
-        border-radius: 10px;
-    }
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: none;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
 
     .close {
         color: #aaa;
@@ -384,6 +396,8 @@
         border: 1px solid #ccc;
         border-radius: 5px;
     }
+
+
 </style>
 
 <script>
