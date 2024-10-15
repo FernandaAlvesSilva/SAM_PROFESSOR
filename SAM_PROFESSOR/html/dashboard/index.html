@@ -192,85 +192,78 @@
 
         <!-- Card de Progresso Acadêmico com Gráfico -->
         <div class="card">
-                        <h3>Progresso Acadêmico Geral</h3>
-                        <p>Média de progresso dos alunos nas disciplinas coordenadas.</p>
-                        <canvas id="progressChart"></canvas>
-                </div>
-
-
-
-                <!-- Card de Desempenho das Turmas -->
-                <div class="card">
-                        <h3>Desempenho das Turmas</h3>
-                        <canvas id="performanceChart"></canvas>
-                </div>
-
+            <h3>Progresso Acadêmico Geral</h3>
+            <p>Média de progresso dos alunos nas disciplinas coordenadas.</p>
+            <canvas id="progressChart"></canvas>
         </div>
+
+        <!-- Card de Desempenho das Turmas -->
+        <div class="card">
+            <h3>Desempenho das Turmas</h3>
+            <canvas id="performanceChart"></canvas>
+        </div>
+    </div>
 </main>
 
 <style>
 
+
+    .main-dashboard {
+        background-color: green;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h3 {
+        margin-top: 0;
+    }
+
+    .count {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+    }
+
+    .events-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .events-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .events-list span {
+        font-weight: bold;
+    }
+
+    @media (min-width: 600px) {
         .main-dashboard {
-            background-color: blue;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
 
-        .card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-decoration: none;
-            color: #333;
-            transition: transform 0.2s;
-            flex: 1 1 calc(100% - 40px); /* Default to full width */
-            max-width: calc(100% - 40px); /* Default to full width */
+    @media (min-width: 900px) {
+        .main-dashboard {
+            grid-template-columns: repeat(3, 1fr);
         }
-
-        @media (min-width: 600px) {
-            .card {
-                flex: 1 1 calc(50% - 40px); /* 2 cards per row */
-                max-width: calc(50% - 40px); /* 2 cards per row */
-            }
-        }
-
-        @media (min-width: 900px) {
-            .card {
-                flex: 1 1 calc(33.33% - 40px); /* 3 cards per row */
-                max-width: calc(33.33% - 40px); /* 3 cards per row */
-            }
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            margin-top: 0;
-        }
-
-        .count {
-            font-size: 2em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .events-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .events-list li {
-            margin: 10px 0;
-        }
-
-        .events-list span {
-            font-weight: bold;
-        }
-
+    }
 </style>
 
 
