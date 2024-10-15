@@ -1,5 +1,5 @@
 *{
-    background-color: #f39c12;
+    background-color: pink;
 }
 
 .container {
@@ -24,7 +24,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .filters select, .filters input {
