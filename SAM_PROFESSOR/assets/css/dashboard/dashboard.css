@@ -1,5 +1,5 @@
 .main-dashboard {
-    background-color: rgb(94, 255, 0);
+    background-color: aqua;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -85,10 +85,6 @@
 }
 
 @media (max-width: 480px) {
-    .card {
-        flex: 1 1 100%;
-    }
-
     .card h3 {
         font-size: 14px;
     }
@@ -111,3 +107,7 @@
     width: 100% !important;
     height: auto !important;
 }
+
+
+
+
