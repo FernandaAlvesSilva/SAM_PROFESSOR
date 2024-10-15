@@ -1,5 +1,8 @@
+*{
+    background-color: #f39c12;
+}
+
 .container {
-background-color: pink;
     width: 90%;
     max-width: 800px;
     margin: 20px auto;
