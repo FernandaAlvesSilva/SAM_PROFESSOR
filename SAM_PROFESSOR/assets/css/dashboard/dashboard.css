@@ -1,7 +1,7 @@
 .main-dashboard {
-    padding: 10px;
+    /*padding: 10px;*/
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 
@@ -74,80 +74,15 @@
     margin-top: 15px;
 }
 
-/* Responsividade */
-
-/* Telas pequenas (celulares) */
-@media (max-width: 600px) {
-    .main-dashboard {
-        grid-template-columns: 1fr;
-    }
-
-    .card h3 {
-        font-size: 20px;
-    }
-
-    .card p, .card .count {
-        font-size: 14px;
-    }
-
-    .chart-container {
-        height: 150px;
-    }
-}
-
-/* Telas médias (tablets) */
-@media (min-width: 601px) and (max-width: 768px) {
+/* Media Queries para responsividade */
+@media (min-width: 600px) {
     .main-dashboard {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .card h3 {
-        font-size: 22px;
-    }
-
-    .card p, .card .count {
-        font-size: 15px;
-    }
-
-    .chart-container {
-        height: 180px;
-    }
 }
 
-/* Telas grandes (notebooks e computadores) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 900px) {
     .main-dashboard {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card h3 {
-        font-size: 24px;
-    }
-
-    .card p, .card .count {
-        font-size: 16px;
-    }
-
-    .chart-container {
-        height: 200px;
-    }
-}
-
-/* Telas extra grandes (computadores grandes) */
-@media (min-width: 1025px) {
-    .main-dashboard {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card h3 {
-        font-size: 25px;
-    }
-
-    .card p, .card .count {
-        font-size: 17px;
-    }
-
-    .chart-container {
-        height: 250px;
     }
 }
