@@ -190,94 +190,112 @@
             </ul>
         </div>
 
-        <!-- Card de Progresso Acadêmico com Gráfico -->
-        <div class="card">
-            <h3>Progresso Acadêmico Geral</h3>
-            <p>Média de progresso dos alunos nas disciplinas coordenadas.</p>
-            <canvas id="progressChart"></canvas>
-        </div>
-
-        <!-- Card de Desempenho das Turmas -->
-        <div class="card">
-            <h3>Desempenho das Turmas</h3>
-            <canvas id="performanceChart"></canvas>
-        </div>
-    </div>
 </main>
 
 <style>
-
 .main-dashboard {
-    background-color: red;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .card {
+    flex: 1 1 calc(33.333% - 20px);
     background-color: #fff;
-    border-radius: 8px;
+    color: #666;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-decoration: none;
-    color: #333;
-    transition: transform 0.2s;
-    min-height: 150px; /* Ajuste conforme necessário */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
-    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #341e4e;
 }
 
-.count {
-    font-size: 2rem;
+.card .count {
+    font-size: 24px;
     font-weight: bold;
-    margin: 0.5rem 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
 }
 
 .events-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .events-list li {
-    margin-bottom: 0.5rem;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
 }
 
 .events-list span {
     font-weight: bold;
+    color: #341e4e;
 }
 
-@media (max-width: 599px) {
-    .main-dashboard {
-        grid-template-columns: 1fr;
-        padding: 0.5rem; /* Ajuste o padding em telas menores */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
-@media (min-width: 600px) {
-    .main-dashboard {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card .count {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .events-list li {
+        font-size: 12px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 899px) {
-    .main-dashboard {
-        grid-template-columns: repeat(2, 1fr); /* Colunas para telas intermediárias */
+@media (max-width: 480px) {
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .card .count {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+
+    .events-list li {
+        font-size: 10px;
     }
 }
-
-@media (min-width: 900px) {
-    .main-dashboard {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 </style>
 
 
