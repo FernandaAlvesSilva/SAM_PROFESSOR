@@ -274,6 +274,8 @@
 </div>
 
 <style>
+
+
 .container {
     background-color: white;
     max-width: 1200px;
@@ -281,7 +283,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Adiciona rolagem horizontal ao container */
+   
 }
 
 h1, h2 {
@@ -291,6 +293,11 @@ h1, h2 {
 .info-section, .evaluations, .resources, .classes {
     margin-bottom: 30px;
     color: #333;
+}
+
+.classes, .evaluations{
+    margin-top: 20px;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
 }
 
 .info-header div {
@@ -303,11 +310,6 @@ h1, h2 {
     color: #444;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
-}
-
-/* Adicione um contêiner para a tabela */
-.table-container {
-    overflow-x: auto; /* Adiciona rolagem horizontal */
 }
 
 table {
