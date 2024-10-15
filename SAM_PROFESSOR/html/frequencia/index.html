@@ -136,9 +136,7 @@
 <!--=================================================================== MAIN CONTENT ============================================================-->
 
 <main>
-    <style>
-     
-    </style>
+
     <div class="container">
         <h1>Chamada de Aula</h1>
         
@@ -187,91 +185,93 @@
         </div>
 
         <!-- Tabela de Chamada -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Nº</th>
-                    <th>Nome do Aluno</th>
-                    <th>Status</th>
-                    <th>Observações</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>João Silva</td>
-                    <td class="actions">
-                        <button onclick="marcarPresenca(this)">Presente</button>
-                        <button onclick="marcarAusencia(this)">Ausente</button>
-                    </td>
-                    <td><textarea placeholder="Adicionar observação"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="editarStatus(this)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ana Souza</td>
-                    <td class="actions">
-                        <button onclick="marcarPresenca(this)">Presente</button>
-                        <button onclick="marcarAusencia(this)">Ausente</button>
-                    </td>
-                    <td><textarea placeholder="Adicionar observação"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="editarStatus(this)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Carlos Oliveira</td>
-                    <td class="actions">
-                        <button onclick="marcarPresenca(this)">Presente</button>
-                        <button onclick="marcarAusencia(this)">Ausente</button>
-                    </td>
-                    <td><textarea placeholder="Adicionar observação"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="editarStatus(this)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Maria Lima</td>
-                    <td class="actions">
-                        <button onclick="marcarPresenca(this)">Presente</button>
-                        <button onclick="marcarAusencia(this)">Ausente</button>
-                    </td>
-                    <td><textarea placeholder="Adicionar observação"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="editarStatus(this)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Pedro Santos</td>
-                    <td class="actions">
-                        <button onclick="marcarPresenca(this)">Presente</button>
-                        <button onclick="marcarAusencia(this)">Ausente</button>
-                    </td>
-                    <td><textarea placeholder="Adicionar observação"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="editarStatus(this)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Lucas Almeida</td>
-                    <td class="actions">
-                        <button onclick="marcarPresenca(this)">Presente</button>
-                        <button onclick="marcarAusencia(this)">Ausente</button>
-                    </td>
-                    <td><textarea placeholder="Adicionar observação"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="editarStatus(this)">Editar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nome do Aluno</th>
+                        <th>Status</th>
+                        <th>Observações</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>João Silva</td>
+                        <td class="actions">
+                            <button onclick="marcarPresenca(this)">Presente</button>
+                            <button onclick="marcarAusencia(this)">Ausente</button>
+                        </td>
+                        <td><textarea placeholder="Adicionar observação"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="editarStatus(this)">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ana Souza</td>
+                        <td class="actions">
+                            <button onclick="marcarPresenca(this)">Presente</button>
+                            <button onclick="marcarAusencia(this)">Ausente</button>
+                        </td>
+                        <td><textarea placeholder="Adicionar observação"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="editarStatus(this)">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Carlos Oliveira</td>
+                        <td class="actions">
+                            <button onclick="marcarPresenca(this)">Presente</button>
+                            <button onclick="marcarAusencia(this)">Ausente</button>
+                        </td>
+                        <td><textarea placeholder="Adicionar observação"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="editarStatus(this)">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Maria Lima</td>
+                        <td class="actions">
+                            <button onclick="marcarPresenca(this)">Presente</button>
+                            <button onclick="marcarAusencia(this)">Ausente</button>
+                        </td>
+                        <td><textarea placeholder="Adicionar observação"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="editarStatus(this)">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pedro Santos</td>
+                        <td class="actions">
+                            <button onclick="marcarPresenca(this)">Presente</button>
+                            <button onclick="marcarAusencia(this)">Ausente</button>
+                        </td>
+                        <td><textarea placeholder="Adicionar observação"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="editarStatus(this)">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lucas Almeida</td>
+                        <td class="actions">
+                            <button onclick="marcarPresenca(this)">Presente</button>
+                            <button onclick="marcarAusencia(this)">Ausente</button>
+                        </td>
+                        <td><textarea placeholder="Adicionar observação"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="editarStatus(this)">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- Botão de Salvar Chamada -->
         <div class="save-button">
