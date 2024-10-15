@@ -207,63 +207,77 @@
 
 <style>
 
+.main-dashboard {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
 
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+    min-height: 150px; /* Ajuste conforme necessário */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.count {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+}
+
+.events-list li {
+    margin-bottom: 0.5rem;
+}
+
+.events-list span {
+    font-weight: bold;
+}
+
+@media (max-width: 599px) {
     .main-dashboard {
-        background-color: green;
-        display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1rem;
+        padding: 0.5rem; /* Ajuste o padding em telas menores */
     }
+}
 
-    .card {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        text-decoration: none;
-        color: #333;
-        transition: transform 0.2s;
+@media (min-width: 600px) {
+    .main-dashboard {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .card:hover {
-        transform: translateY(-5px);
+@media (min-width: 768px) and (max-width: 899px) {
+    .main-dashboard {
+        grid-template-columns: repeat(2, 1fr); /* Colunas para telas intermediárias */
     }
+}
 
-    .card h3 {
-        margin-top: 0;
+@media (min-width: 900px) {
+    .main-dashboard {
+        grid-template-columns: repeat(3, 1fr);
     }
+}
 
-    .count {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 0.5rem 0;
-    }
-
-    .events-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .events-list li {
-        margin-bottom: 0.5rem;
-    }
-
-    .events-list span {
-        font-weight: bold;
-    }
-
-    @media (min-width: 600px) {
-        .main-dashboard {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (min-width: 900px) {
-        .main-dashboard {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
 </style>
 
 
