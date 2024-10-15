@@ -1,10 +1,11 @@
+
 .headerpx {
     background-color: #341e4e;
     color: white;
     border-radius: 10px;
     text-align: center;
     padding: 1.25em;
-    margin-bottom: 1.25em; /* Added margin-bottom to create space */
+    margin-bottom: 1.25em;
 }
 
 .containerxx {
@@ -85,6 +86,10 @@ h2 {
     border-bottom-right-radius: 5px;
 }
 
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -151,18 +156,23 @@ th {
     .filters {
         flex-direction: column;
     }
+
     .filters select, .filters input {
         width: 100%;
     }
+
     .containerxx {
         padding: 0.625em;
     }
+
     .headerpx {
         padding: 0.625em;
     }
+
     .summary, .timeline {
         padding: 0.625em;
     }
+
     th, td {
         padding: 0.5em;
     }
@@ -175,3 +185,4 @@ th {
         margin-bottom: 0.625em;
     }
 }
+
