@@ -135,7 +135,6 @@
 
 <main>
 
-
     <div class="container">
         <h1>Lançamento de Notas</h1>
 
@@ -175,80 +174,82 @@
         </div>
 
         <!-- Tabela de Notas -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Nº</th>
-                    <th>Nome do Aluno</th>
-                    <th>Nota 1</th>
-                    <th>Nota 2</th>
-                    <th>Média Final</th>
-                    <th>Recuperação</th>
-                    <th>Média com Recuperação</th>
-                    <th>Observações</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>João Silva</td>
-                    <td><input type="number" id="nota1-1" min="0" max="10"></td>
-                    <td><input type="number" id="nota2-1" min="0" max="10"></td>
-                    <td><input type="number" id="media-1" readonly></td>
-                    <td><input type="number" id="recuperacao-1" min="0" max="10"></td>
-                    <td><input type="number" id="media-rec-1" readonly></td>
-                    <td><textarea id="observacoes-1" placeholder="Observações"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="calcularMedia(1)">Calcular Média</button>
-                        <button class="edit" onclick="editarNota(1)">Editar Nota</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ana Souza</td>
-                    <td><input type="number" id="nota1-2" min="0" max="10"></td>
-                    <td><input type="number" id="nota2-2" min="0" max="10"></td>
-                    <td><input type="number" id="media-2" readonly></td>
-                    <td><input type="number" id="recuperacao-2" min="0" max="10"></td>
-                    <td><input type="number" id="media-rec-2" readonly></td>
-                    <td><textarea id="observacoes-2" placeholder="Observações"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="calcularMedia(2)">Calcular Média</button>
-                        <button class="edit" onclick="editarNota(2)">Editar Nota</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Pedro Lima</td>
-                    <td><input type="number" id="nota1-3" min="0" max="10"></td>
-                    <td><input type="number" id="nota2-3" min="0" max="10"></td>
-                    <td><input type="number" id="media-3" readonly></td>
-                    <td><input type="number" id="recuperacao-3" min="0" max="10"></td>
-                    <td><input type="number" id="media-rec-3" readonly></td>
-                    <td><textarea id="observacoes-3" placeholder="Observações"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="calcularMedia(3)">Calcular Média</button>
-                        <button class="edit" onclick="editarNota(3)">Editar Nota</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Maria Oliveira</td>
-                    <td><input type="number" id="nota1-4" min="0" max="10"></td>
-                    <td><input type="number" id="nota2-4" min="0" max="10"></td>
-                    <td><input type="number" id="media-4" readonly></td>
-                    <td><input type="number" id="recuperacao-4" min="0" max="10"></td>
-                    <td><input type="number" id="media-rec-4" readonly></td>
-                    <td><textarea id="observacoes-4" placeholder="Observações"></textarea></td>
-                    <td class="actions">
-                        <button class="edit" onclick="calcularMedia(4)">Calcular Média</button>
-                        <button class="edit" onclick="editarNota(4)">Editar Nota</button>
-                    </td>
-                </tr>
-                <!-- Adicione mais alunos conforme necessário -->
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nome do Aluno</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Média Final</th>
+                        <th>Recuperação</th>
+                        <th>Média com Recuperação</th>
+                        <th>Observações</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>João Silva</td>
+                        <td><input type="number" id="nota1-1" min="0" max="10"></td>
+                        <td><input type="number" id="nota2-1" min="0" max="10"></td>
+                        <td><input type="number" id="media-1" readonly></td>
+                        <td><input type="number" id="recuperacao-1" min="0" max="10"></td>
+                        <td><input type="number" id="media-rec-1" readonly></td>
+                        <td><textarea id="observacoes-1" placeholder="Observações"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="calcularMedia(1)">Calcular Média</button>
+                            <button class="edit" onclick="editarNota(1)">Editar Nota</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ana Souza</td>
+                        <td><input type="number" id="nota1-2" min="0" max="10"></td>
+                        <td><input type="number" id="nota2-2" min="0" max="10"></td>
+                        <td><input type="number" id="media-2" readonly></td>
+                        <td><input type="number" id="recuperacao-2" min="0" max="10"></td>
+                        <td><input type="number" id="media-rec-2" readonly></td>
+                        <td><textarea id="observacoes-2" placeholder="Observações"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="calcularMedia(2)">Calcular Média</button>
+                            <button class="edit" onclick="editarNota(2)">Editar Nota</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pedro Lima</td>
+                        <td><input type="number" id="nota1-3" min="0" max="10"></td>
+                        <td><input type="number" id="nota2-3" min="0" max="10"></td>
+                        <td><input type="number" id="media-3" readonly></td>
+                        <td><input type="number" id="recuperacao-3" min="0" max="10"></td>
+                        <td><input type="number" id="media-rec-3" readonly></td>
+                        <td><textarea id="observacoes-3" placeholder="Observações"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="calcularMedia(3)">Calcular Média</button>
+                            <button class="edit" onclick="editarNota(3)">Editar Nota</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Maria Oliveira</td>
+                        <td><input type="number" id="nota1-4" min="0" max="10"></td>
+                        <td><input type="number" id="nota2-4" min="0" max="10"></td>
+                        <td><input type="number" id="media-4" readonly></td>
+                        <td><input type="number" id="recuperacao-4" min="0" max="10"></td>
+                        <td><input type="number" id="media-rec-4" readonly></td>
+                        <td><textarea id="observacoes-4" placeholder="Observações"></textarea></td>
+                        <td class="actions">
+                            <button class="edit" onclick="calcularMedia(4)">Calcular Média</button>
+                            <button class="edit" onclick="editarNota(4)">Editar Nota</button>
+                        </td>
+                    </tr>
+                    <!-- Adicione mais alunos conforme necessário -->
+                </tbody>
+            </table>
+        </div>
 
         <!-- Botões de Ações -->
         <div class="save-button">
@@ -260,9 +261,6 @@
         </div>
     </div>
 </main>
-
-
-
 
     <!-- Scripts -->
     <script src="../../assets/js/sidebar/sidebar.js"></script>
