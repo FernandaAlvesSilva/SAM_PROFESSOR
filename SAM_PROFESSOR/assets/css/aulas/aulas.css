@@ -4,6 +4,7 @@
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Estilo geral das seções */
@@ -110,7 +111,7 @@
 }
 
 /* Tarefas Atribuídas e Pendentes */
-.assigned-tasks ul {
+.assigned-ttasks ul {
     list-style-type: none;
     padding: 0;
 }
@@ -149,11 +150,6 @@
 
 .additional-materials input[type="file"] {
     display: none;
-}
-
-.additional-materials .btn {
-    width: 100%;
-    margin-top: 10px;
 }
 
 /* Comunicação Individual */
@@ -206,7 +202,7 @@
 }
 
 /* Botões */
-.btn {
+.btn, .btnarq {
     padding: 10px 20px;
     background-color: #26A69A;
     color: white;
@@ -218,9 +214,26 @@
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.btn:hover {
+.btn:hover, .btnarq:hover {
     background-color: #00796B;
     transform: translateY(-2px);
+}
+
+#activity-file-name, #file-name {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#activity-file-name:hover, #file-name:hover {
+    background-color: #e0e0e0;
+    color: #333;
 }
 
 /* Modals */
@@ -263,21 +276,67 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-    main {
-        padding: 20px 10px;
-        margin: 20px 10px 0 10px;
+    .containerfx {
+        padding: 0 10px;
     }
 
     .section {
         padding: 10px;
     }
 
-    .activities-status ul li {
+    .activities-status ul li, .assigned-tasks ul li {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .activities-status ul li a {
+    .activities-status ul li a, .assigned-tasks ul li a {
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .activities-status ul li, .assigned-tasks ul li {
+        padding: 8px;
+    }
+
+    .activities-status ul li a, .assigned-tasks ul li a {
+        margin-top: 8px;
+        padding: 4px 8px;
+    }
+
+    activity-file-name
+
+    .btn, .btnarq {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 400px) {
+    .section h2, .section h3, .section h4 {
+        font-size: 1.2rem;
+    }
+
+    .section p, .section ul, .section select, .section textarea {
+        font-size: 0.8rem;
+    }
+
+    .activities-status ul li, .assigned-tasks ul li {
+        padding: 6px;
+    }
+
+    .activities-status ul li a, .assigned-tasks ul li a {
+        margin-top: 6px;
+        padding: 3px 6px;
+    }
+
+    .btn, .btnarq {
+        padding: 6px 12px;
+        font-size: 0.8em;
     }
 }
