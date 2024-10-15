@@ -141,24 +141,21 @@
 <!--=================================================================== MAIN CONTENT ============================================================-->
 
 <main>
-
-    
-
     <div class="main-dashboard">
-        
         <!-- Card de Visão Geral de Disciplinas -->
         <a href="disciplinas.html" class="card">
             <h3>Disciplinas Coordenadas</h3>
             <div class="count">8</div>
-            <p>Disciplinas atualmente sob sua coordenação.Clique para detalhes.</p>
+            <p>Disciplinas atualmente sob sua coordenação. Clique para detalhes.</p>
         </a>
 
         <!-- Card de Alunos Supervisionados -->
         <a href="alunos.html" class="card">
             <h3>Alunos Supervisionados</h3>
             <div class="count">120</div>
-            <p>Total de alunos sob supervisão direta em várias disciplinas.Clique para detalhes.</p>
+            <p>Total de alunos sob supervisão direta em várias disciplinas. Clique para detalhes.</p>
         </a>
+
         <!-- Card de Supervisão de Professores -->
         <a href="professores.html" class="card">
             <h3>Professores Supervisionados</h3>
@@ -166,21 +163,12 @@
             <p>Número de professores sob sua coordenação. Clique para detalhes.</p>
         </a>
 
-        
         <!-- Card de Relatórios Pendentes -->
         <a href="relatorios.html" class="card">
             <h3>Relatórios Pendentes</h3>
             <div class="count">3</div>
             <p>Relatórios acadêmicos que precisam ser enviados. Clique para detalhes.</p>
         </a>
-
-        
-        <!-- Card de Progresso Acadêmico com Gráfico -->
-        <div class="card">
-            <h3>Progresso Acadêmico Geral</h3>
-            <p>Média de progresso dos alunos nas disciplinas coordenadas.</p>
-            <canvas id="progressChart"></canvas>
-        </div>
 
         <!-- Card de Reuniões Agendadas -->
         <div class="card">
@@ -192,7 +180,6 @@
             </ul>
         </div>
 
-
         <!-- Card de Comunicados Recentes -->
         <div class="card">
             <h3>Comunicados Recentes</h3>
@@ -202,16 +189,89 @@
                 <li><span>01/10:</span> Mudanças no sistema SAM</li>
             </ul>
         </div>
-        <!-- Card de Desempenho das Turmas -->
+
+        <!-- Card de Progresso Acadêmico com Gráfico -->
         <div class="card">
-            <h3>Desempenho das Turmas</h3>
-            <canvas id="performanceChart"></canvas>
+                        <h3>Progresso Acadêmico Geral</h3>
+                        <p>Média de progresso dos alunos nas disciplinas coordenadas.</p>
+                        <canvas id="progressChart"></canvas>
+                </div>
+
+
+
+                <!-- Card de Desempenho das Turmas -->
+                <div class="card">
+                        <h3>Desempenho das Turmas</h3>
+                        <canvas id="performanceChart"></canvas>
+                </div>
+
         </div>
-
-    </div>
-
-
 </main>
+
+<style>
+
+        .main-dashboard {
+            background-color: blue;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s;
+            flex: 1 1 calc(100% - 40px); /* Default to full width */
+            max-width: calc(100% - 40px); /* Default to full width */
+        }
+
+        @media (min-width: 600px) {
+            .card {
+                flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+                max-width: calc(50% - 40px); /* 2 cards per row */
+            }
+        }
+
+        @media (min-width: 900px) {
+            .card {
+                flex: 1 1 calc(33.33% - 40px); /* 3 cards per row */
+                max-width: calc(33.33% - 40px); /* 3 cards per row */
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .count {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .events-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .events-list li {
+            margin: 10px 0;
+        }
+
+        .events-list span {
+            font-weight: bold;
+        }
+
+</style>
 
 
     <!-- Scripts -->
