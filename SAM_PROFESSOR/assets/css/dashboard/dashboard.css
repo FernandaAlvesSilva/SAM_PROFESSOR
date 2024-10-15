@@ -75,32 +75,19 @@
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
-    .main-dashboard {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 768px) {
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
     .main-dashboard {
         grid-template-columns: 1fr;
-    }
-
-    .card {
-        margin: 0 auto;
-        padding: 12px;
     }
 
     .card h3 {
         font-size: 20px;
     }
 
-    .card p {
-        font-size: 13px;
-    }
-
-    .card .count {
-        font-size: 20px;
+    .card p, .card .count {
+        font-size: 14px;
     }
 
     .chart-container {
@@ -108,25 +95,59 @@
     }
 }
 
-@media (max-width: 480px) {
-    .card {
-        margin: 0 auto;
-        padding: 10px;
+/* Telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .main-dashboard {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card h3 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
-    .card p {
-        font-size: 10px;
-    }
-
-    .card .count {
-        font-size: 20px;
+    .card p, .card .count {
+        font-size: 15px;
     }
 
     .chart-container {
-        height: 100px;
+        height: 180px;
+    }
+}
+
+/* Telas grandes (notebooks e computadores) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-dashboard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .card p, .card .count {
+        font-size: 16px;
+    }
+
+    .chart-container {
+        height: 200px;
+    }
+}
+
+/* Telas extra grandes (computadores grandes) */
+@media (min-width: 1025px) {
+    .main-dashboard {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card h3 {
+        font-size: 25px;
+    }
+
+    .card p, .card .count {
+        font-size: 17px;
+    }
+
+    .chart-container {
+        height: 250px;
     }
 }
