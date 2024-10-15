@@ -12,10 +12,11 @@ h2 {
 .tablecontainer {
     width: 90%;
     margin: 20px auto;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
 }
 
 table {
-    width: 90%;
+    width: 100%; /* Ajusta a largura para 100% do contêiner */
     margin: 80px auto;
     border-collapse: collapse;
     background-color: rgb(184, 181, 181);
@@ -69,6 +70,9 @@ td {
 }
 
 @media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
     table, th, td {
         font-size: 0.8em;
     }
@@ -76,4 +80,3 @@ td {
         padding: 10px;
     }
 }
-
