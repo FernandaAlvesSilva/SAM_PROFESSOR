@@ -71,9 +71,6 @@ O **SAM** é um sistema acadêmico desenvolvido para facilitar a gestão escolar
    ```bash
    https://github.com/FernandaAlvesSilva/SAM_PROFESSOR.git
 
-### Funcionalidades Futuras
-- Integração com sistema de mensageria para comunicação entre professor e aluno.
-- Expansão do módulo de disciplinas com mais ferramentas de avaliação e acompanhamento.
 
 ### Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma **issue** ou enviar um **pull request**.
@@ -83,7 +80,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma **issue** ou
 - **Front-end:** Fernanda e David.
 - **Documentação:** Naie.
 - **Banco de dados:** Danieli.
-
---- 
-
-Esse README abrange as principais telas e funcionalidades para professores no sistema SAM, oferecendo um resumo claro e instruções básicas para contribuir ou executar o projeto.
