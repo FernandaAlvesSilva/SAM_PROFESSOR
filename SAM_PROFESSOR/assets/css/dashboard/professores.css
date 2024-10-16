@@ -6,6 +6,10 @@
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
+* {
+    background-color: blue;
+}
+
 /* Responsividade para a barra de pesquisa */
 .search-bar {
     margin-bottom: 20px;
@@ -141,7 +145,33 @@
 }
 
 /* Responsividade geral */
+@media (max-width: 1024px) {
+    /* Notebook */
+    .main-content {
+        max-width: 900px;
+    }
+
+    .teacher-card {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .teacher-card h3 {
+        font-size: 16px;
+    }
+
+    .teacher-card p {
+        font-size: 12px;
+    }
+
+    .pagination button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 768px) {
+    /* Tablet */
     .search-bar {
         flex-direction: column;
         align-items: stretch; /* Alinha os itens ao longo do eixo principal */
@@ -167,8 +197,8 @@
     }
 }
 
-/* Adicionando mais pontos de interrupção para melhor responsividade */
 @media (max-width: 480px) {
+    /* Smartphone */
     .teacher-card {
         padding: 8px;
         font-size: 12px;
@@ -188,8 +218,8 @@
     }
 }
 
-/* Adicionando ponto de interrupção para telas muito pequenas */
 @media (max-width: 320px) {
+    /* Telas muito pequenas */
     .teacher-card {
         padding: 6px;
         font-size: 10px;
