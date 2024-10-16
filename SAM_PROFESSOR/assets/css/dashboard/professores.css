@@ -6,9 +6,6 @@
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
-*{
-    background-color: red;
-}
 /* Responsividade para a barra de pesquisa */
 .search-bar {
     margin-bottom: 20px;
@@ -18,7 +15,7 @@
     gap: 10px;
     flex-wrap: wrap;
     position: relative;
-    width: 50%;
+    width: 100%;
     max-width: 600px;
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
