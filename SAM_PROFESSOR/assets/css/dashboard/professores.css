@@ -6,6 +6,9 @@
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
+*{
+    background-color: orange;
+}
 /* Responsividade para a barra de pesquisa */
 .search-bar {
     margin-bottom: 20px;
