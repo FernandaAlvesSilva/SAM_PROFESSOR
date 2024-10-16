@@ -1,7 +1,3 @@
-Aqui está um exemplo de README para as telas do SAM (Sistema Acadêmico de Gestão Escolar) relacionadas ao perfil do professor:
-
----
-
 # SAM - Sistema Acadêmico de Gestão Escolar
 ## Módulo: Telas do Professor
 
@@ -73,9 +69,7 @@ O **SAM** é um sistema acadêmico desenvolvido para facilitar a gestão escolar
 ### Como Executar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-repositorio/sam-professor.git
-   ```
-
+   https://github.com/FernandaAlvesSilva/SAM_PROFESSOR.git
 
 ### Funcionalidades Futuras
 - Integração com sistema de mensageria para comunicação entre professor e aluno.
