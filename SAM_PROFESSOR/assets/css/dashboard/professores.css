@@ -6,10 +6,6 @@
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
-* {
-    background-color: green;
-}
-
 /* Responsividade para a barra de pesquisa */
 .search-bar {
     margin-bottom: 20px;
@@ -143,43 +139,18 @@
     background-color: #ccc;
     cursor: not-allowed;
 }
-/* Responsividade para telas menores que 1000px */
-@media screen and (max-width: 1000px) {
-    .main-content {
-        padding: 10px;
-        max-width: 100%;
-    }
 
+/* Responsividade geral */
+@media (max-width: 768px) {
     .search-bar {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .teacher-list {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        align-items: stretch; /* Alinha os itens ao longo do eixo principal */
+        gap: 15px;
     }
 
     .teacher-card {
         padding: 10px;
-    }
-
-    .pagination {
-        flex-direction: column;
-        gap: 5px;
-    }
-}
-
-/* Responsividade para telas menores que 500px */
-@media screen and (max-width: 500px) {
-    .search-bar input[type="text"],
-    .search-bar select {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .teacher-card img {
-        width: 60px;
-        height: 60px;
+        font-size: 14px;
     }
 
     .teacher-card h3 {
@@ -190,34 +161,50 @@
         font-size: 12px;
     }
 
-    .teacher-card a {
-        padding: 8px 12px;
+    .pagination button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Adicionando mais pontos de interrupção para melhor responsividade */
+@media (max-width: 480px) {
+    .teacher-card {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .teacher-card h3 {
+        font-size: 14px;
+    }
+
+    .teacher-card p {
+        font-size: 10px;
     }
 
     .pagination button {
-        padding: 8px 16px;
+        padding: 6px 10px;
+        font-size: 12px;
     }
 }
 
-/* Estilo da seção de créditos */
-.credits {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 10px;
-    font-size: 12px;
-    color: #fff;
-    background-color: #b38add;
-}
+/* Adicionando ponto de interrupção para telas muito pequenas */
+@media (max-width: 320px) {
+    .teacher-card {
+        padding: 6px;
+        font-size: 10px;
+    }
 
-.credits a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
+    .teacher-card h3 {
+        font-size: 12px;
+    }
 
-.credits a:hover {
-    text-decoration: underline;
+    .teacher-card p {
+        font-size: 8px;
+    }
+
+    .pagination button {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
 }
