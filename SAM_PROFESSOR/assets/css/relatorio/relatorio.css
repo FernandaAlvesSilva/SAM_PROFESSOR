@@ -1,0 +1,54 @@
+main {
+    font-family: Arial, sans-serif;
+    color: #341e4e;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #341e4e;
+    margin-bottom: 20px;
+}
+
+.report p, .report ul, .report ol {
+    color: #341e4e;
+    margin-bottom: 15px;
+}
+
+.report ul, .report ol {
+    padding-left: 20px;
+}
+
+.send-button {
+    background-color: #341e4e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.send-button:hover {
+    background-color: #29173d;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .send-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
